@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaMaui_AlejandroPisonero.MostrarUsuarios"
+             Title="MostrarUsuarios">
+    <VerticalStackLayout>
+        <ListView x:Name="listViewUsuarios"
+                  Header="Lista Usuarios"
+                  ItemSelected="listViewUsuarios_ItemSelected"
+                  IsVisible="true">
+           
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <TextCell Text="{Binding nombre}"
+                              Detail="{Binding apellidos}"
+                              TextColor="SeaGreen"
+                              Height="220"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaMaui_AlejandroPisonero.ModificarCondicion"
+             Title="ModificarCondicion">
+    <ContentPage.Content>
+
+        <StackLayout Padding="20" Spacing="15">
+         
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                <Label x:Name="etiquetaSwitch"
+                       Text="Socio: Sí"
+                       FontSize="20" TextColor="DeepSkyBlue"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"/>
+
+                <Switch x:Name="switchSocio"
+                        IsToggled="True"
+                        Toggled="switchSocio_Toggled"
+                        Margin="10"/>
+
+            </StackLayout>
+
+            <Button Text="Modificar"
+                    Clicked="Button_Clicked"
+                    FontSize="18"
+                    BackgroundColor="IndianRed"
+                    TextColor="White"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaMaui_AlejandroPisonero.AltaUsuario"
+             Title="AltaUsuario">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" Padding="20">
+
+            <Label Text="Nuevo Usuario"
+                   FontSize="25" TextColor="IndianRed"
+                   FontFamily="Times New Roman"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center" Margin="0,0,0,20"/>
+
+            <Entry x:Name="textoCod"
+                   Placeholder="Introduce el código del usuario"
+                   Margin="0,0,0,10"/>
+
+            <Grid Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="textoNombre"
+                       Placeholder="Nombre"
+                       Grid.Column="0" Margin="0,0,5,0"/>
+                <Entry x:Name="textoApellidos"
+                       Placeholder="Apellidos"
+                       Grid.Column="1"/>
+            </Grid>
+
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                <StackLayout Orientation="Vertical" >
+                    <Label x:Name="etiquetaSwitch"
+                           Text="Socio: Sí"
+                           FontSize="18" TextColor="MediumSeaGreen"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"/>
+                    <Switch x:Name="switchSocio"
+                            IsToggled="True"
+                            Toggled="switchSocio_Toggled"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                    <Label Text="Fecha Nacimiento"
+                           FontSize="18" TextColor="MediumSeaGreen"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"/>
+                    <DatePicker x:Name="etiquetaFechaNacimiento"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Picker x:Name="pickerGenero" Title="Género" Margin="0,0,0,10">
+                <Picker.Items>
+                    <x:String>Hombre</x:String>
+                    <x:String>Mujer</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Guardar"
+                    Clicked="Button_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    Margin="0,20,0,0"
+                    FontSize="18"
+                    BackgroundColor="IndianRed"
+                    TextColor="White"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

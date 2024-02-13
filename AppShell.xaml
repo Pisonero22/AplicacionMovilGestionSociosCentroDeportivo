@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PracticaMaui_AlejandroPisonero.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PracticaMaui_AlejandroPisonero"
+    Shell.FlyoutBehavior="Disabled">
+
+
+    <TabBar>
+
+        <Tab Title="Pagina Inicio">
+            <ShellContent Title="Pagina Inicio" ContentTemplate="{DataTemplate local:PaginaInicio}"/>            
+        </Tab>
+
+        <Tab Title="Insertar Usuario">
+            <ShellContent Title="Alta Usuario" ContentTemplate="{DataTemplate local:AltaUsuario}"/>            
+        </Tab>
+
+        <Tab Title="Mostrar Usuarios">
+            <ShellContent Title="Mostrar Usuarios" ContentTemplate="{DataTemplate local:MostrarUsuarios}"/>            
+        </Tab>
+
+        <Tab Title="Mostrar Socios">
+            <ShellContent Title="Mostrar Socios" ContentTemplate="{DataTemplate local:MostrarSocios}"/>            
+        </Tab>
+
+        <Tab Title="Mostrar No Socios">
+            <ShellContent Title="Mostrar No Socios" ContentTemplate="{DataTemplate local:MostrarNoSocios}"/>            
+        </Tab>
+        <Tab Title="Modificar Condicion Usuario"
+             Route="TabModificar">
+            <ShellContent Title="ModificarCondicion"
+                          Route="ModificarCondicion"
+                          ContentTemplate="{DataTemplate local:ModificarCondicion}"/>
+            
+        </Tab>
+    </TabBar>   
+
+</Shell>
+
